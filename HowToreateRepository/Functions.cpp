@@ -1,17 +1,18 @@
 #include "Function.h"
 
 template<typename T>
-void FillRand(T *arr[], const int n)
+void FillRand(T arr[], const int n)
 {
 	//cout << typeid(arr).name() << endl;
 	for (int i = 0; i < n; i++)
 	{
-		arr[i] = rand() % 100;
+		arr[i] = rand() % 10000;
+		arr[i] /= 100;
 	}
 }
 
 template<typename T>
-void FillRand(T *arr[ROWS][COLS], const int ROWS, const int COLS)
+void FillRand(T arr[ROWS][COLS], const int ROWS, const int COLS)
 {
 	for (int i = 0; i < ROWS; i++)
 	{
@@ -23,7 +24,7 @@ void FillRand(T *arr[ROWS][COLS], const int ROWS, const int COLS)
 }
 
 template<typename T>
-void Print(T *arr[], const int n)
+void Print(T arr[], const int n)
 {
 	for (int i = 0; i < n; i++)
 	{
@@ -33,7 +34,7 @@ void Print(T *arr[], const int n)
 }
 
 template<typename T>
-void Print(T *arr[ROWS][COLS], const int ROWS, const int COLS)
+void Print(T arr[ROWS][COLS], const int ROWS, const int COLS)
 {
 	for (int i = 0; i < ROWS; i++)
 	{
@@ -47,7 +48,7 @@ void Print(T *arr[ROWS][COLS], const int ROWS, const int COLS)
 }
 
 template<typename T>
-void Sort(T *arr[], const int n)
+void Sort(T arr[], const int n)
 {
 	for (int i = 0; i < n; i++)
 	{
@@ -64,7 +65,7 @@ void Sort(T *arr[], const int n)
 }
 
 template<typename T>
-void Sort(T *arr[ROWS][COLS], const int ROWS, const int COLS)
+void Sort(T arr[ROWS][COLS], const int ROWS, const int COLS)
 {
 	int iterations = 0;
 	for (int i = 0; i < ROWS; i++)
